@@ -1,0 +1,40 @@
+.priceComparison {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.comparedValue p {
+  margin: 0;
+}
+.comparedValue {
+  padding-bottom: 20px;
+}
+
+.title {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.pricingInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.pricingInfo p {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.pricingBar {
+  display: flex;
+  justify-content: flex-end;
+  height: 15px;
+  background-color: #006FF2;
+  border-radius: 10px;
+}
+.tax {
+  height: 15px;
+  border-radius: 10px;
+  background-color: #FF5D5D;
+}
