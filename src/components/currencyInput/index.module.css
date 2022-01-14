@@ -19,3 +19,10 @@ input {
   color: #113366;
   font-size: 18px;  
 }
+
+.disable {
+  border: 2px solid #FF5D5D;
+}
+.disable p {
+  color: #FF5D5D;
+}

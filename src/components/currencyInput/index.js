@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import style from './index.module.css'
 
 const moneyformatter =  new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -18,7 +19,7 @@ const Util = {
 
 const CurrencyInput = ({ value, onChange, ...props }) => {
 	return (
-    <div className={style.container}>
+    <div className={cn ([style.container], {[style.disable] : value <= 0})}>
       <p className={style.currency}>{props.ISOcode}</p>
       <input
         {...props}

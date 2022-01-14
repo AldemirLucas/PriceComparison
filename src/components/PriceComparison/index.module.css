@@ -66,3 +66,7 @@
 .tax p {
   margin-right: 5px;
 }
+
+.disable {
+  opacity: 0.5;
+}

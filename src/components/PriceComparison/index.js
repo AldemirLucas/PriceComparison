@@ -33,6 +33,7 @@ function PriceComparison() {
           valueTax={traditional && (traditional && traditional.tax * 100).toFixed(0)}
           convertedCoin='USA'
           convertedValue={traditional && traditional.amount.toFixed(2)}
+          validate={amount <= 0}
         />
 
         <SimulationResult
@@ -40,6 +41,7 @@ function PriceComparison() {
           valueTax={ourBank && (ourBank && ourBank.tax * 100).toFixed(0)}
           convertedCoin='USA'
           convertedValue={ourBank &&  ourBank.amount.toFixed(2)}
+          validate={amount <= 0}
         />
 
     </div>
