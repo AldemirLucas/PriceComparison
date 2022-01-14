@@ -12,7 +12,10 @@ function SimulationResult(props) {
       </div>
 
       <div className={style.pricingBar}>
-        <div className={style.tax} style={{width:'30px'}}></div>
+        <p className={style.convertedValue}>{props.convertedCoin}<span/>{props.convertedValue}</p>
+        <div className={style.tax} style={{width:`${props.valueTax}`}}>
+          <p>{props.valueTax}%</p>
+        </div>
       </div>
 
     </div>
