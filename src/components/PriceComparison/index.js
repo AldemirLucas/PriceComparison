@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import CurrencyInput from './../currencyInput';
 import SimulationResult from './simulationResult';
 import Services from '../currencyInput/services';
+import Util from '../moneyFormatter';
 import style from './index.module.css'
 
 function PriceComparison() {
   const [amount, setAmount] = useState(0)
   const [traditional, setTraditional] = useState()
   const [ourBank, setOurBank] = useState()
-
+  
   useEffect(() => {
     Services.simulate(amount).then((res) => {
       setTraditional(res.bank)
@@ -30,17 +31,17 @@ function PriceComparison() {
 
         <SimulationResult
           title='Bancos tradicionais'
-          valueTax={traditional && (traditional && traditional.tax * 100).toFixed(0)}
+          valueTax={traditional && traditional.tax}
           convertedCoin='USA'
-          convertedValue={traditional && traditional.amount.toFixed(2)}
+          convertedValue={traditional && Util.valueToMoney(traditional.amount)}
           validate={amount <= 0}
         />
 
         <SimulationResult
           title='Nosso banco'
-          valueTax={ourBank && (ourBank && ourBank.tax * 100).toFixed(0)}
+          valueTax={ourBank && ourBank.tax}
           convertedCoin='USA'
-          convertedValue={ourBank &&  ourBank.amount.toFixed(2)}
+          convertedValue={ourBank &&  Util.valueToMoney(ourBank.amount)}
           validate={amount <= 0}
         />
 

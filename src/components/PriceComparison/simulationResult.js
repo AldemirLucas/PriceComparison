@@ -2,8 +2,9 @@ import cn from 'classnames'
 import style from './index.module.css'
 
 function SimulationResult(props) {
-  
-  console.log(props.convertedValue)
+  const valueTax = (props.valueTax * 100).toFixed(0)
+  const widthTax = (props.valueTax * 100)+ 12
+  const convertedValue = props.convertedValue
 
   return (
     <div className={style.simulationResult}>
@@ -15,9 +16,12 @@ function SimulationResult(props) {
       </div>
 
       <div className={cn ([style.pricingBar], {[style.disable]: props.validate === true})}>
-        <p className={style.convertedValue}>{props.convertedCoin}<span/>{props.convertedValue}</p>
-        <div className={style.tax} style={{width:`${props.valueTax}`}}>
-          <p>{props.valueTax}%</p>
+        <p className={style.convertedValue}>
+          {props.convertedCoin}<span/>
+          {convertedValue}
+        </p>
+        <div className={style.tax} style={{width:`${widthTax}%`}}>
+          <p>{valueTax}<span>%</span></p>
         </div>
       </div>
 

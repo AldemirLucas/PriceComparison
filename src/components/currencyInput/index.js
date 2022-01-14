@@ -1,21 +1,6 @@
 import cn from 'classnames';
+import Util from '../moneyFormatter';
 import style from './index.module.css'
-
-const moneyformatter =  new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-
-const Util = {
-  valueToMoney: value => {
-    return moneyformatter
-      .format(value)
-      .replace('R$', '')
-  },
-  moneyToValue: money => {
-    return (parseFloat(money
-      .replace(',', '.')
-      .replaceAll('.', '')
-    ) || 0) / 100;
-  }
-}
 
 const CurrencyInput = ({ value, onChange, ...props }) => {
 	return (

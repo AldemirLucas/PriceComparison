@@ -38,6 +38,7 @@
 
 .pricingBar {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   height: 23px;
@@ -64,7 +65,12 @@
   background-color: #FF5D5D;
 }
 .tax p {
-  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.tax span {
+  font-size: 10px;
 }
 
 .disable {
