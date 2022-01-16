@@ -32,7 +32,7 @@ function PriceComparison() {
         <SimulationResult
           title='Bancos tradicionais'
           valueTax={traditional && traditional.tax}
-          convertedCoin='USA'
+          convertedCoin='USD'
           convertedValue={traditional && Util.valueToMoney(traditional.amount)}
           validate={amount <= 0}
         />
@@ -40,7 +40,7 @@ function PriceComparison() {
         <SimulationResult
           title='Nosso banco'
           valueTax={ourBank && ourBank.tax}
-          convertedCoin='USA'
+          convertedCoin='USD'
           convertedValue={ourBank &&  Util.valueToMoney(ourBank.amount)}
           validate={amount <= 0}
         />

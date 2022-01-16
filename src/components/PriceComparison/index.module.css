@@ -11,7 +11,7 @@
 .comparedValue {
   padding: 10px 20px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
 }
 
 .title {
@@ -21,7 +21,7 @@
 
 .simulationResult {
   padding:10px 20px;
-  border-bottom: 2px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
 }
 .simulationResult:last-child {
   border-bottom: none;
